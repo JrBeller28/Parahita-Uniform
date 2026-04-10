@@ -98,7 +98,7 @@ export default function AboutPage() {
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/12.png" 
+                  src="/images/13.png" 
                   alt="Workshop" 
                   className="w-full h-auto"
                   referrerPolicy="no-referrer"
@@ -153,9 +153,9 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { src: '/images/vid1.mp4', title: 'Proses Produksi' },
-              { src: '/images/vid2.mp4', title: 'Kualitas Bahan' },
-              { src: '/images/vid3.mp4', title: 'Hasil Akhir' }
+              { src: '/images/Video1.mp4', title: 'Proses Produksi' },
+              { src: '/images/Video2.mp4', title: 'Kualitas Bahan' },
+              { src: '/images/Video3.mp4', title: 'Hasil Akhir' }
             ].map((video, index) => (
               <motion.div
                 key={index}
