@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "products": {
+      "title": "Products",
+      "description": "Store product information",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "description": "Product name" },
+        "category": { "type": "string", "description": "Product category" },
+        "image": { "type": "string", "description": "Image URL" },
+        "description": { "type": "string", "description": "Product description" },
+        "features": { "type": "array", "items": { "type": "string" } },
+        "specs": { "type": "object" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "category", "image"]
+    },
+    "partners": {
+      "title": "Partners",
+      "description": "Store partner information",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Partner name" },
+        "logo": { "type": "string", "description": "Logo URL" },
+        "type": { "type": "string", "enum": ["Corporate", "Government"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "logo", "type"]
+    },
+    "contacts": {
+      "title": "Contacts",
+      "description": "Store contact form submissions",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "subject": { "type": "string" },
+        "message": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["name", "email", "message"]
+    },
+    "stats": {
+      "title": "Stats",
+      "description": "Store website visit counts",
+      "type": "object",
+      "properties": {
+        "date": { "type": "string" },
+        "count": { "type": "number" }
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "description": "Store landing page settings",
+      "type": "object",
+      "properties": {
+        "heroBackground": { "type": "string", "description": "Hero section background image URL" }
+      }
+    }
+  },
+  "firestore": {
+    "products": { "schema": "products", "description": "Collection of products" },
+    "partners": { "schema": "partners", "description": "Collection of partners" },
+    "contacts": { "schema": "contacts", "description": "Collection of contact messages" },
+    "stats": { "schema": "stats", "description": "Daily visit stats" },
+    "settings": { "schema": "settings", "description": "Landing page settings" }
+  }
+}
