@@ -54,34 +54,33 @@ export default function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center relative">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center gap-4 group">
+        <div className="flex justify-between items-center gap-4">
+          {/* Logo - Left Column */}
+          <div className="flex-1 min-w-[120px] lg:min-w-[200px] flex justify-start">
+            <Link to="/" className="flex items-center group">
               <div className="relative">
                 <img 
                   src="/logo.png" 
                   alt="Parahita Logo" 
-                  className="h-12 w-auto object-contain dark:invert dark:brightness-200 group-hover:scale-110 transition-transform duration-300"
+                  className="h-9 lg:h-12 w-auto object-contain dark:invert dark:brightness-200 group-hover:scale-110 transition-transform duration-300"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute -inset-2 bg-brand-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-
             </Link>
           </div>
 
-          {/* Desktop Nav - Centered Group */}
-          <div className="hidden md:flex items-center gap-4 absolute left-1/2 -translate-x-1/2">
+          {/* Desktop Nav - Center Column */}
+          <div className="hidden md:flex items-center gap-2 lg:gap-4 flex-shrink-0">
             {/* Nav Links Pill */}
-            <div className="flex items-center gap-1 bg-slate-100/30 dark:bg-slate-800/30 backdrop-blur-md p-1.5 rounded-full border border-slate-200/40 dark:border-slate-700/40 shadow-sm">
+            <div className="flex items-center gap-0.5 bg-slate-100/30 dark:bg-slate-800/30 backdrop-blur-md p-1 rounded-full border border-slate-200/40 dark:border-slate-700/40 shadow-sm">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
                   onClick={() => handleLinkClick(link.href)}
                   className={cn(
-                    "px-6 py-3 text-[10px] font-black uppercase tracking-[0.25em] transition-all rounded-full relative group whitespace-nowrap",
+                    "px-3 lg:px-6 py-2 lg:py-3 text-[9px] lg:text-[10px] font-black uppercase tracking-[0.15em] lg:tracking-[0.2em] transition-all rounded-full relative group whitespace-nowrap",
                     location.pathname === link.href || (location.pathname === '/' && link.href.startsWith('/#') && location.hash === link.href.substring(1))
                       ? "text-brand-600 dark:text-brand-400 bg-white dark:bg-slate-900 shadow-xl shadow-slate-200/40 dark:shadow-none"
                       : "text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
@@ -95,17 +94,18 @@ export default function Navbar() {
             {/* Theme Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-100/30 dark:bg-slate-800/30 backdrop-blur-md text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-all border border-slate-200/40 dark:border-slate-700/40 shadow-sm"
+              className="w-10 h-10 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-slate-100/30 dark:bg-slate-800/30 backdrop-blur-md text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-brand-400 transition-all border border-slate-200/40 dark:border-slate-700/40 shadow-sm"
             >
-              {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+              <Sun size={18} className="dark:hidden" />
+              <Moon size={18} className="hidden dark:block" />
             </button>
 
             {/* Language Switcher */}
-            <div className="flex items-center bg-slate-100/30 dark:bg-slate-800/30 backdrop-blur-md rounded-full p-1.5 border border-slate-200/40 dark:border-slate-700/40 shadow-sm">
+            <div className="flex items-center bg-slate-100/30 dark:bg-slate-800/30 backdrop-blur-md rounded-full p-1 border border-slate-200/40 dark:border-slate-700/40 shadow-sm">
               <button
                 onClick={() => setLang('ID')}
                 className={cn(
-                  "px-4 py-2 text-[10px] font-black rounded-full transition-all",
+                  "px-3 lg:px-4 py-1.5 lg:py-2 text-[9px] lg:text-[10px] font-black rounded-full transition-all",
                   lang === 'ID' ? "bg-white dark:bg-slate-700 text-brand-600 dark:text-brand-400 shadow-md" : "text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
                 )}
               >
@@ -114,7 +114,7 @@ export default function Navbar() {
               <button
                 onClick={() => setLang('EN')}
                 className={cn(
-                  "px-4 py-2 text-[10px] font-black rounded-full transition-all",
+                  "px-3 lg:px-4 py-1.5 lg:py-2 text-[9px] lg:text-[10px] font-black rounded-full transition-all",
                   lang === 'EN' ? "bg-white dark:bg-slate-700 text-brand-600 dark:text-brand-400 shadow-md" : "text-slate-400 hover:text-slate-600 dark:hover:text-slate-300"
                 )}
               >
@@ -123,12 +123,12 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Right Actions */}
-          <div className="hidden md:flex items-center">
+          {/* Right Actions - Right Column */}
+          <div className="hidden md:flex flex-1 min-w-[120px] lg:min-w-[200px] justify-end items-center">
             <Link
               to="/#kontak"
               onClick={() => handleLinkClick('/#kontak')}
-              className="bg-brand-600 text-white px-8 py-4 rounded-full text-[11px] font-black uppercase tracking-[0.25em] hover:bg-brand-700 transition-all shadow-xl shadow-brand-500/30 active:scale-95 whitespace-nowrap"
+              className="bg-brand-600 text-white px-5 lg:px-8 py-3 lg:py-4 rounded-full text-[10px] lg:text-[11px] font-black uppercase tracking-[0.15em] lg:tracking-[0.25em] hover:bg-brand-700 transition-all shadow-xl shadow-brand-500/30 active:scale-95 whitespace-nowrap"
             >
               {t('nav.contact')}
             </Link>
