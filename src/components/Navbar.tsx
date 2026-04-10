@@ -60,7 +60,7 @@ export default function Navbar() {
             <Link to="/" className="flex items-center group">
               <div className="relative">
                 <img 
-                  src="/images/logo.png" 
+                  src="/images/Logo.png" 
                   alt="Parahita Logo" 
                   className="h-9 lg:h-12 w-auto object-contain dark:invert dark:brightness-200 group-hover:scale-110 transition-transform duration-300"
                   referrerPolicy="no-referrer"
