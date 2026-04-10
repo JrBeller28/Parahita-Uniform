@@ -8,7 +8,7 @@ import { doc, getDoc } from 'firebase/firestore';
 
 export default function Hero() {
   const { t } = useLanguage();
-  const [heroBg, setHeroBg] = useState('/images/seragam.png');
+  const [heroBg, setHeroBg] = useState('/images/background.png');
 
   useEffect(() => {
     const fetchSettings = async () => {
