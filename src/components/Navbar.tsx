@@ -62,7 +62,7 @@ export default function Navbar() {
                 <img 
                   src="/images/pps.png" 
                   alt="Parahita Logo" 
-                  className="h-9 lg:h-12 w-auto object-contain dark:invert dark:brightness-200 group-hover:scale-110 transition-transform duration-300"
+                  className="h-11 lg:h-13 w-auto object-contain dark:invert dark:brightness-200 group-hover:scale-110 transition-transform duration-300"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute -inset-2 bg-brand-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
