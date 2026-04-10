@@ -37,7 +37,7 @@ export default function AboutPage() {
       <section className="relative py-24 bg-slate-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img 
-            src="11.png" 
+            src="/images/11.png" 
             alt="About Us Background" 
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
@@ -98,7 +98,7 @@ export default function AboutPage() {
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="12.png" 
+                  src="/images/12.png" 
                   alt="Workshop" 
                   className="w-full h-auto"
                   referrerPolicy="no-referrer"
@@ -153,9 +153,9 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { src: '/vid1.mp4', title: 'Proses Produksi' },
-              { src: '/vid2.mp4', title: 'Kualitas Bahan' },
-              { src: '/vid3.mp4', title: 'Hasil Akhir' }
+              { src: '/images/vid1.mp4', title: 'Proses Produksi' },
+              { src: '/images/vid2.mp4', title: 'Kualitas Bahan' },
+              { src: '/images/vid3.mp4', title: 'Hasil Akhir' }
             ].map((video, index) => (
               <motion.div
                 key={index}

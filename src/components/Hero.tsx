@@ -8,7 +8,7 @@ import { doc, getDoc } from 'firebase/firestore';
 
 export default function Hero() {
   const { t } = useLanguage();
-  const [heroBg, setHeroBg] = useState('/seragam.png');
+  const [heroBg, setHeroBg] = useState('/images/seragam.png');
 
   useEffect(() => {
     const fetchSettings = async () => {
@@ -112,7 +112,7 @@ export default function Hero() {
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl aspect-[4/5]">
               <img
-                src="11.png"
+                src="/images/11.png"
                 alt="Seragam Profesional"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 referrerPolicy="no-referrer"

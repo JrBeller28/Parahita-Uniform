@@ -82,7 +82,7 @@ export default function FeaturesPage() {
       <section className="relative py-32 bg-brand-950 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/11.png"
+            src="/images/11.png"
             alt="Features Background"
             className="w-full h-full object-cover opacity-20"
             referrerPolicy="no-referrer"
@@ -193,7 +193,7 @@ export default function FeaturesPage() {
               <div className="relative">
                 <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
                   <img 
-                    src="/12.png" 
+                    src="/images/12.png" 
                     alt="Quality Commitment" 
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"

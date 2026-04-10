@@ -12,7 +12,7 @@ export default function Footer() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/11.png"
+          src="/images/11.png"
           alt="Footer Background"
           className="w-full h-full object-cover opacity-10"
           referrerPolicy="no-referrer"
@@ -25,7 +25,7 @@ export default function Footer() {
           <div className="space-y-8">
             <Link to="/" className="flex items-center gap-4 group">
               <img 
-                src="/logo.png" 
+                src="/images/logo.png" 
                 alt="Parahita Logo" 
                 className="h-16 w-auto object-contain brightness-0 invert"
                 referrerPolicy="no-referrer"

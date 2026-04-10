@@ -20,7 +20,7 @@ export default function About() {
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl aspect-square lg:aspect-[4/5]">
               <img
-                src="/12.png"
+                src="/images/12.png"
                 alt="PT Parahita Prima Sentosa Office"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
                 referrerPolicy="no-referrer"

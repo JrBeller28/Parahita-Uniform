@@ -130,7 +130,7 @@ export default function AdminDashboard() {
   const [contacts, setContacts] = useState<any[]>([]);
   const [stats, setStats] = useState({ visits: 0, trend: 0 });
   const [isSeeding, setIsSeeding] = useState(false);
-  const [settings, setSettings] = useState({ heroBackground: '/seragam.png' });
+  const [settings, setSettings] = useState({ heroBackground: '/images/seragam.png' });
   const [isSavingSettings, setIsSavingSettings] = useState(false);
 
   useEffect(() => {
@@ -487,7 +487,7 @@ export default function AdminDashboard() {
       {/* Sidebar */}
       <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col">
         <div className="p-6 border-b border-slate-100 dark:border-slate-800">
-          <img src="/logo.png" alt="Logo" className="h-8 w-auto mb-2 dark:invert dark:brightness-200" />
+          <img src="/images/logo.png" alt="Logo" className="h-8 w-auto mb-2 dark:invert dark:brightness-200" />
           <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">Admin Panel</p>
         </div>
         

@@ -64,7 +64,7 @@ export default function ProductsPage() {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/11.png"
+            src="/images/11.png"
             alt="Products Background"
             className="w-full h-full object-cover opacity-40"
             referrerPolicy="no-referrer"
